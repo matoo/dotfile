@@ -11,3 +11,12 @@ else
     PS1='%m:%c %n%% '
   fi
 fi
+
+# If not found local profile directory, don't anything
+PROFILE_D="$HOME/.local/etc/profile.d"
+if [ -d $PROFILE_D ]; then
+  for s in $(ls $PROFILE_D/*); do
+    [ -f $s -a -r $s ] && . $s
+  done
+fi
+unset PROFILE_D
