@@ -3,11 +3,9 @@
 # If not running interactively, don't anything
 if [ -z "$PS1" ]; then
   return 0
-elif [ -n "$SSH_TTY" ]; then
-  PS1='[\u@\h \W]\\$ '
-else
-  PS1='\h:\W \u\$ '
 fi
+
+PS1='\h:\W \u\$ '
 
 # History setting
 shopt -s histappend     # Turn on parallel history. and disable to overwrite history file.
