@@ -18,4 +18,4 @@ HISTSIZE=100            # Set the maximum number of lines which are kept in memo
 
 # Tab-completion
 autoload -Uz compinit
-compinit
+compinit -u
