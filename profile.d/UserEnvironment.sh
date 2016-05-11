@@ -5,12 +5,6 @@ PATH="${PATH}:${P_PATH}"
 MANPATH="${MANPATH}:${P_MANPATH}"
 unset P_PATH P_MANPATH
 
-# Tab-completion
-if [ $SHELL = "/bin/zsh" ]; then
-  autoload -Uz compinit
-  compinit
-fi
-
 # Export Global Environment Variables
 ## Personal Preference Environment
 export PREFIX="$HOME/.local"
